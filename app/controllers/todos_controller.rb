@@ -49,7 +49,7 @@ class TodosController < ApplicationController
   private 
 
   def todo_params 
-    params.require(:todo).permit(:item, :description, :priority, :due)
+    params.require(:todo).permit(:item, :description, :priority, :due, :status)
   end 
 
 end

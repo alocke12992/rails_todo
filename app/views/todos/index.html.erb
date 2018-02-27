@@ -1,10 +1,55 @@
 <h1>To dos</h1>
 <p><%= link_to 'New Item', new_todo_path %></p>
-<% @todos.order('priority ASC').each do |todo| %> 
-  <h2><%= todo.item %></h2>
-  <%= link_to 'Details', todo_path(todo) %> 
-  <%= link_to 'Edit', edit_todo_path(todo) %>
-  <%= link_to 'Delete', todo, method: :delete %>
-<% end %> 
+
+  <h2>Not Started</h2>
+  <ul>
+  <% @todos.order('priority ASC').each do |todo| %>
+    <% if todo.status == "Not Started" %>
+    <li>
+
+      <h2>
+        <%= todo.item %>
+      </h2>
+      <%= link_to 'Details', todo_path(todo) %>
+        <%= link_to 'Edit', edit_todo_path(todo) %>
+          <%= link_to 'Delete', todo, method: :delete %>
+            <% end %>
+    </li>
+    <% end %>
+  </ul>
+  
+
+
+<h2>In Progress</h2>
+<ul>
+  <% @todos.order('priority ASC').each do |todo| %>
+    <% if todo.status == "In Progress" %>
+    <li>
+      <h4><%= todo.item %></h4>
+      <%= link_to 'Details', todo_path(todo) %>
+      <%= link_to 'Edit', edit_todo_path(todo) %>
+      <%= link_to 'Delete', todo, method: :delete %>
+    <% end %>
+    </li>
+  <% end %>
+    
+</ul>
+
+<h2>Completed</h2>
+<ul>
+  <% @todos.order('priority ASC').each do |todo| %>
+    <% if todo.status == "Completed" %>
+    <li>
+      <h2><%= todo.item %></h2>
+      <%= link_to 'Details', todo_path(todo) %>
+      <%= link_to 'Edit', edit_todo_path(todo) %>
+      <%= link_to 'Delete', todo, method: :delete %>
+    <% end %>
+    </li>
+  <% end %>
+</ul>
+
+
+
 
 

@@ -4,6 +4,7 @@ class CreateTodos < ActiveRecord::Migration[5.1]
       t.string :item
       t.text :description
       t.integer :priority
+      t.string :status 
       t.datetime :due
 
       t.timestamps

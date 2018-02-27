@@ -8,5 +8,8 @@
   <%= f.label :priority %>
   <%= f.select :priority, options_for_priority, :prompt => 'Select one' %>
   <br />
+  <%= f.label :status %>
+  <%= f.select :status, options_for_status, :prompt => 'Select one' %>
+  <br /> 
   <%= f.submit %>
 <% end %>
