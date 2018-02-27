@@ -18,10 +18,59 @@
 body {
    /* fallback */
    background-color: black;
-
-   color: #089bf0;
+  color: #29d8fd;
  }
 
- 
 
+ 
+.cen {
+  display: flex;
+  justify-content: center;
+}
+
+.mybtn {
+  background-color: #29d8fd;
+  color: black;
+  height: 40px;
+  border: black;
+  border-radius: 10px;
+  width: 150px;
+  margin: 20px;
+}
+
+.mybtn a {
+  color: black !important;
+}
+
+
+.home {
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px 0;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end; 
+  margin: 20px 0;
+}
+
+.navbtn {
+  background-color: #29d8fd;
+  color: black;
+  height: 25px;
+  border: black;
+  border-radius: 10px;
+  width: 75px;
+  margin: 15px;
+  font-size: 12px;
+}
+
+.navbtn a {
+ color: black !important;
+}
+
+.innact {
+  margin: 75px;
+}
 

@@ -1,2 +1,10 @@
-<%= link_to 'Home', root_path %> 
-<%= link_to 'Todo', todos_path %> 
+
+  <div class='home'>
+    <%= link_to image_tag("innactlo.png", :height => '50px'), root_path %>
+  </div>
+  <div class='links'>
+    <button class='navbtn'><%= link_to 'Todo', todos_path %></button>
+    <button class='navbtn'><%= link_to 'Progress', progress_path %></button>
+  </div>
+</div>
+
