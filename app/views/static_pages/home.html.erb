@@ -1,1 +1,26 @@
-<h1>Welcome</h1> 
+<h1>Finisher</h1>
+<h4>Organize your life</h4>
+<%= link_to 'Your To-Do List', todos_path %>
+<h2> Current Progress</h2>
+
+<div>
+  <h4>Total Tasks Created</h4>
+  <p><%= @todos.length %></p>
+</div>
+
+<div>
+  <h4>Completed Tasks</h4>
+  <p><%= @todos.select{ |value| value[:status] == 'Completed' }.length %></p>
+</div>
+
+<div>
+  <h4>In Progress</h4>
+  <p><%= @todos.select{ |value| value[:status] == 'In Progress' }.length %></p>
+</div>
+<div>
+  <h4>Not Started</h4>
+  <p><%= @todos.select{ |value| value[:status] == 'No Started' }.length %></p>
+  <h5>Completion Rate</h5>
+  <p><%= @todos.select{ |value| value[:status] == 'COMPLETE' }.length / (@todos.length).to_f * 100 %>%</p>
+</div>
+      
